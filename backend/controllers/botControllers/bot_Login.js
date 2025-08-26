@@ -146,12 +146,12 @@ const loginPage = async(req, res) => {
   
             res.cookie("accessToken", accessToken, {
               httpOnly: true,
-              secure: true,
+              secure: false,
               sameSite: "strict",
             });
             res.cookie("refreshToken", refreshToken, {
               httpOnly: true,
-              secure: true,
+              secure: false,
               sameSite: "strict",
             });
   
