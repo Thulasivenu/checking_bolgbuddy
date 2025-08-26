@@ -42,6 +42,10 @@ app.use(
   })
 );
 
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'OK', uptime: process.uptime(), timestamp: Date.now() });
+});
+
 //  connect DB and start server
 async function startServer() {
   try {
