@@ -122,7 +122,7 @@ const Login = () => {
             // console.log(result.userId)
             sessionStorage.setItem("userName", userName);
             sessionStorage.setItem("userId", userId);
-            navigate("/blogBuddy", {
+            navigate("http://mgck44oc8s4gkoockk080wks.46.202.179.121.sslip.io/blogBuddy", {
               replace: true,
               state: {
                 userEmail: result.userEmail,
