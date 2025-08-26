@@ -187,9 +187,10 @@ const ChatInterface = () => {
         method: "GET",
         credentials: "include",
       });
+      console.log("response", response);
 
       if (response.status !== 200) {
-        navigate("/login");
+        navigate("/");
       }
       if (response.ok) {
         const getQueries = await fetch(
