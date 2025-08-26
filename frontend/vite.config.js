@@ -9,4 +9,10 @@ export default defineConfig({
     tailwindcss(),
     // qrcode()
   ],
+  server: {
+    allowedHosts:[
+      ".sslip.io",
+      "localhost"
+    ]
+  }
 })
