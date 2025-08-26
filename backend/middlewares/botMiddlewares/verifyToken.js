@@ -8,6 +8,7 @@ app.use(cookieParser());
 
 const verifyToken = (req, res, next) => {
     const token = req.cookies.accessToken; // Look for the token in the cookies
+    console.log("TOKEN", token);
   
     if (!token) {
       return res
