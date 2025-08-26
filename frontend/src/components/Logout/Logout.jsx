@@ -10,7 +10,7 @@ const Logout = () => {
         e.preventDefault()
         // navigate('/login')
         try {
-            const response = await fetch('http://localhost:3000/api/v1/users/logout', {
+            const response = await fetch('http://z0cg8oo40kc8swckgcc8k8ks.46.202.179.121.sslip.io:3000/api/v1/users/logout', {
                 method: 'POST',
                 credentials: 'include',
             });
