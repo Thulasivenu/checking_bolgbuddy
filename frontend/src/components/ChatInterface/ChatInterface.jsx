@@ -183,7 +183,7 @@ const ChatInterface = () => {
 
   useEffect(() => {
     const checkAuth = async () => {
-      const response = await fetch("http://localhost:3000/api/v1/users/hrbot", {
+      const response = await fetch("http://z0cg8oo40kc8swckgcc8k8ks.46.202.179.121.sslip.io:3000/api/v1/users/hrbot", {
         method: "GET",
         credentials: "include",
       });
@@ -193,7 +193,7 @@ const ChatInterface = () => {
       }
       if (response.ok) {
         const getQueries = await fetch(
-          "http://localhost:3000/api/v1/users/userQueries",
+          "http://z0cg8oo40kc8swckgcc8k8ks.46.202.179.121.sslip.io:3000/api/v1/users/userQueries",
           {
             method: "GET",
           }
@@ -490,7 +490,7 @@ const ChatInterface = () => {
     document.activeElement.blur();
 
     try {
-      const response = await fetch(`http://localhost:3000/api/v1/users/ask`, {
+      const response = await fetch(`http://z0cg8oo40kc8swckgcc8k8ks.46.202.179.121.sslip.io:3000/api/v1/users/ask`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: questionToAsk, userName, userId }),
