@@ -36,7 +36,7 @@ app.use(
 );
 app.use(
   cors({
-    origin: ["http://mgck44oc8s4gkoockk080wks.46.202.179.121.sslip.io:5173"],
+    origin: ["http://mgck44oc8s4gkoockk080wks.46.202.179.121.sslip.io"],
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
