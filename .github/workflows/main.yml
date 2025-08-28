@@ -24,7 +24,7 @@ jobs:
       # Step 4: Run tests (JWT_SECRET available here)
       - name: Run tests with JWT secret
         env:
-          JWT_SECRET: ${{ secrets.JWT_SECRET_KEY }}
+          JWT_SECRET_KEY: ${{ secrets.JWT_SECRET_KEY }}
         run: |
           echo "JWT secret is available inside this step"
           npm start
