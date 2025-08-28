@@ -1,0 +1,30 @@
+name: Node.js CI with JWT
+
+on: [push]  # runs whenever you push code
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Get your repo code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      # Step 3: Install dependencies
+      - name: Install packages
+        run: npm install
+
+      # Step 4: Run tests (JWT_SECRET available here)
+      - name: Run tests with JWT secret
+        env:
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
+        run: |
+          echo "JWT secret is available inside this step"
+          npm start
